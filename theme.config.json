@@ -1,0 +1,9 @@
+{
+  "wallpaper": "assets/wallpaper.jpg",
+  "dimTop": 0.05,
+  "dimBottom": 0.12,
+  "sidebarOpacity": 0.38,
+  "sidebarBlur": 5,
+  "composerOpacity": 0.52,
+  "composerBlur": 20
+}

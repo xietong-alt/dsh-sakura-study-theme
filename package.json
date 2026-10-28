@@ -1,0 +1,19 @@
+{
+  "name": "dsh-sakura-study-theme",
+  "version": "1.1.0",
+  "private": true,
+  "description": "DeepSeek Harness 原图背景与深色磨砂玻璃主题，附安装与定制 skill",
+  "type": "module",
+  "license": "MIT",
+  "author": "xietong-alt",
+  "repository": { "type": "git", "url": "https://github.com/xietong-alt/dsh-sakura-study-theme.git" },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "icon.svg", "locale/*.json", "assets/wallpaper.*", "styles/*.css", "theme.config.json", "scripts/build-theme.mjs", "skills/**", "README.md", "LICENSE", "ASSET_LICENSE.md", "THIRD_PARTY_LICENSES.txt"],
+  "scripts": { "build": "node scripts/build-theme.mjs", "test": "node --test tests/*.test.mjs" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "immediately": true } }
+}

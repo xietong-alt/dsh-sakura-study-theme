@@ -1,0 +1,27 @@
+/* Vivid wallpaper with dark glass; no white wash over the main canvas. */
+html body[data-sakura-study] {
+ color-scheme: dark;
+ --dsw-specific-sidebar-fill: rgba(18,20,34,.38) !important;
+ --dsw-alias-bg-base: transparent !important;
+ --dsw-specific-input-major: rgba(80,74,88,.52) !important;
+ --dsw-specific-menu: rgba(31,30,44,.96) !important;
+ --dsw-menu-surface-fill: rgba(31,30,44,.96) !important;
+ --dsw-alias-settings-card-fill: rgba(31,30,44,.88) !important;
+ --dsw-alias-bg-module-platform: rgba(27,27,42,.86) !important;
+ --dsw-specific-bubble: rgba(65,58,85,.72) !important;
+ --dsw-alias-label-primary: #faf5fc !important;
+ --dsw-alias-label-secondary: #e3dce9 !important;
+ --dsw-alias-label-tertiary: #c5bbd0 !important;
+ --dsw-alias-label-caption: #bdb2c9 !important;
+}
+body[data-sakura-study] .mP3x-q_frame { background: linear-gradient(rgba(13,14,25,.05),rgba(13,14,25,.12)), var(--sakura-study-wallpaper) center / cover no-repeat !important; }
+body[data-sakura-study] .mP3x-q_centerCol { background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+body[data-sakura-study] .mP3x-q_sidebarCol { background: var(--dsw-specific-sidebar-fill) !important; backdrop-filter: blur(5px) saturate(110%) !important; -webkit-backdrop-filter: blur(5px) saturate(110%) !important; border-right: 1px solid rgba(235,218,245,.10) !important; }
+body[data-sakura-study] .mP3x-q_frame::before, body[data-sakura-study] .mP3x-q_bottomRow { background: var(--dsw-specific-sidebar-fill) !important; }
+body[data-sakura-study] .wtg9ga_root { background: transparent !important; }
+body[data-sakura-study] .GRgSLq_card { background: var(--dsw-specific-input-major) !important; backdrop-filter: blur(20px) saturate(115%) !important; -webkit-backdrop-filter: blur(20px) saturate(115%) !important; border: 1px solid rgba(245,225,247,.34) !important; box-shadow: 0 12px 42px rgba(8,9,19,.25) !important; }
+body[data-sakura-study] .LOmM4q_bubble { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+@media (prefers-reduced-transparency: reduce) {
+ html body[data-sakura-study] { --dsw-specific-sidebar-fill: rgba(18,20,34,.9) !important; --dsw-specific-input-major: rgba(50,46,62,.95) !important; }
+ body[data-sakura-study] .mP3x-q_sidebarCol, body[data-sakura-study] .GRgSLq_card, body[data-sakura-study] .LOmM4q_bubble { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+}
