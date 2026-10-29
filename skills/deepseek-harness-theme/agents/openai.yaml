@@ -1,4 +1,4 @@
 interface:
   display_name: "DeepSeek Harness 背景美化"
-  short_description: "安装或定制 Harness 原图背景与深色玻璃面板，调整透明度并修复发白"
-  default_prompt: "请用 $deepseek-harness-theme 帮我安装或调整 DeepSeek Harness 的背景和磨砂玻璃效果。"
+  short_description: "设置 Harness 图片、动图或四秒内视频背景，搭配深色玻璃面板"
+  default_prompt: "请用 $deepseek-harness-theme 帮我设置 DeepSeek Harness 的图片、动图或四秒内视频背景。"

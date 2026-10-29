@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import vm from 'node:vm';
+import { browserHarness } from './browser-harness.mjs';
 import { buildTheme, projectRoot } from '../scripts/build-theme.mjs';
 
 const scratchRoot = path.resolve(projectRoot, 'work');
@@ -16,29 +16,6 @@ async function scratch(t) {
     await fs.rm(resolved, { recursive: true, force: true });
   });
   return dir;
-}
-
-function browserHarness() {
-  const attrs = new Map();
-  const styles = [];
-  let exports;
-  let cleanup;
-  return {
-    attrs, styles,
-    run(source) {
-      vm.runInNewContext(source, {
-        window: { __ModuleLoader__: { load(module) { exports = module.factory(); } } },
-        document: {
-          body: { getAttribute(k) { return attrs.has(k) ? attrs.get(k) : null; }, setAttribute(k, v) { attrs.set(k, v); }, removeAttribute(k) { attrs.delete(k); } },
-          head: { appendChild(style) { styles.push(style); } },
-          createElement() { return { dataset: {}, textContent: '', remove() { const index = styles.indexOf(this); if (index >= 0) styles.splice(index, 1); } }; }
-        }
-      });
-      assert.equal(styles.length, 0, 'Factory registration must not modify the page.');
-      exports.apply({ effect(fn) { cleanup = fn(); } });
-    },
-    dispose() { cleanup(); }
-  };
 }
 
 test('build preserves original image bytes and emits a complete installable bundle', async t => {
@@ -106,7 +83,7 @@ test('non-image content is refused before creating output files', async t => {
   const image = path.join(dir, 'fake.jpg');
   const out = path.join(dir, 'not-created');
   await fs.writeFile(image, '<svg onload="alert(1)"></svg>');
-  await assert.rejects(buildTheme({ image, out }), /JPEG, PNG or WebP/);
+  await assert.rejects(buildTheme({ image, out }), /JPEG, PNG\/APNG, GIF, WebP, MP4 or WebM/);
   await assert.rejects(fs.access(out));
 });
 

@@ -1,8 +1,8 @@
 {
   "name": "dsh-sakura-study-theme",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
-  "description": "DeepSeek Harness 原图背景与深色磨砂玻璃主题，附安装与定制 skill",
+  "description": "DeepSeek Harness 动态背景与深色玻璃主题，支持动图和 4 秒内视频",
   "type": "module",
   "license": "MIT",
   "author": "xietong-alt",
@@ -13,7 +13,7 @@
     "./locale/*.json": "./locale/*.json",
     "./icon": "./icon.svg"
   },
-  "files": ["index.js", "client.js", "cordis.patch.yml", "icon.svg", "locale/*.json", "assets/wallpaper.*", "styles/*.css", "theme.config.json", "scripts/build-theme.mjs", "skills/**", "README.md", "LICENSE", "ASSET_LICENSE.md", "THIRD_PARTY_LICENSES.txt"],
+  "files": ["index.js", "client.js", "cordis.patch.yml", "icon.svg", "locale/*.json", "assets/wallpaper.*", "styles/*.css", "src/runtime.mjs", "theme.config.json", "scripts/*.mjs", "skills/**", "README.md", "LICENSE", "ASSET_LICENSE.md", "THIRD_PARTY_LICENSES.txt"],
   "scripts": { "build": "node scripts/build-theme.mjs", "test": "node --test tests/*.test.mjs" },
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "immediately": true } }
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-client-ui-layout"] } }
 }
