@@ -1,4 +1,4 @@
-# 樱花夜读 · DeepSeek Harness Theme
+#  · DeepSeek Harness Theme
 
 一个可以自由更换 **DeepSeek Harness 背景**的社区插件。支持静态图片、动图，以及**时长不超过 4 秒的 MP4 / WebM 视频**；视频会静音循环播放，让你喜欢的画面成为聊天和工作的背景。
 
