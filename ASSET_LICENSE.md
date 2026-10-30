@@ -6,4 +6,6 @@
 
 `styles/dark-palette.css` 从 DeepSeek Harness 0.2.1-rc.3 的 `@deepseek-ai/dsh-client-ui-theme` 深色调色板适配，保留的 MIT 授权全文见 `THIRD_PARTY_LICENSES.txt`。
 
+`assets/preview-redacted.png` 是项目发起者提供的成品界面截图，经图像编辑工具遮挡左下角头像和账户名后用于功能展示。截图中的第三方插画、应用标识和界面内容保留各自的权利，不随项目代码重新授予 MIT 许可。
+
 如果你是插画权利人，需要补充署名或移除图片，请通过本仓库 Issue 联系维护者。
